@@ -1,0 +1,12 @@
+depth/
+outputs_old/
+outputs/
+data/
+__pycache__/
+outpaint/
+output_outpaint_debug/
+debug_outputs/
+**/*.png
+**/*.jpg
+backups/
+inf*.sh
