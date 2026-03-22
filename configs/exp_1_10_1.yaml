@@ -1,0 +1,5 @@
+input_dir: "/home/shenzhen/Datasets/VITON/train_debug_100"
+max_images: null # TODO: return to null for full dataset when debug DONE!!!!!
+
+# NOTE: set this as non-empty 
+background_override_text: "background of a neutral indoor studio with visible walls and a flat floor plane, softly lit with even ambient light"

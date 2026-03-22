@@ -1,15 +1,13 @@
 # Introduction
-We consider two tasks: **human relighting** and **driving scene relighting**, which share a similar generation pipeline but differ in how depth is obtained.
+We consider the task of **human relighting**, which follows a generation pipeline based on outpainting and depth guidance.
 
 **Flux Outpainting**
 
-For human relighting ONLY, we use `FLUX.1-Fill-dev` to outpaint each source image twice: once with a base prompt (from dataset annotations or generated prompts) and once with a relighting prompt. This expands the image to the target resolution (e.g., 784×784) and introduces rich background context.
+We use `FLUX.1-Fill-dev` to outpaint each source image twice: once with a base prompt (from dataset annotations or generated prompts) and once with a relighting prompt. This expands the image to the target resolution (e.g., 784×784) and introduces rich background context.
 
 **Depth Estimation**
 
-For human relighting, depth maps are computed from the outpainted images.
-
-For driving scenes, depth is directly estimated from the input image without outpainting.
+Depth maps are computed from the outpainted images.
 
 **Flux 2x1 Generation**
 
@@ -33,8 +31,6 @@ pip install git+https://github.com/asomoza/image_gen_aux.git
 ```
 
 ## 2. Grounded SAM 2 Body Mask Generation
-
-**Note:** This step is only required for **human relighting**.
 
 Clone the forked repository:  
 https://github.com/ShenZheng2000/Grounded-SAM-2
@@ -82,7 +78,6 @@ See `inf.sh` for example commands.
 
 Make sure to specify `inference_mode` in the YAML config file:
 - `inference_mode: human` → outpainting + T2I
-- `inference_mode: driving` → T2I
 
 
 ### Example Dataset Structure

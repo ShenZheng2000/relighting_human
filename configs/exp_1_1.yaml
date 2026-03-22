@@ -1,0 +1,2 @@
+input_dir: "/home/shenzhen/Datasets/VITON/train_debug_100"
+max_images: null # TODO: return to null for full dataset

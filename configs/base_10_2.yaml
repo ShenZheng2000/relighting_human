@@ -1,0 +1,30 @@
+input_dir: "/home/shenzhen/Datasets/dataset_with_garment_debug_100"
+
+# T2I Parameters
+height: 784
+width: 784
+cfg: 5
+num_steps: 30
+
+# Depth Parameters
+depth_mode: outpaint # depth_mode: raw
+
+# Outpainting Parameters
+cfg_outpaint: 30
+num_inference_steps: 50
+extract_bg_from_base_prompt: true
+save_depth_maps: true
+crop_to_foreground: true # crop_to_foreground: false
+upper_crop: false
+
+# Others
+relight_image_only: false
+prompt_version: 6
+inference_mode: human
+
+# Set to a non-empty string to override background description
+background_override_text: "" 
+center_crop: false
+
+# Debugging
+max_images: null  # Set to a number for debugging, otherwise leave null if unlimited
