@@ -31,7 +31,8 @@ pip install git+https://github.com/asomoza/image_gen_aux.git
 ```
 
 ## 2. Download Dataset
-Download **VITON-HD** dataset from [here](https://drive.google.com/file/d/1tLx8LRp-sxDp0EcYmYoV_vXdSc-jJ79w/view).
+
+For our human relighting data generation pipeline, you only need 100 images with GPT-4o generated caption and Grounded SAM2-generated fg masks from VITON-HD. Please download them from [here](https://drive.google.com/drive/folders/1LIVq0SKuvAoJwTvFzFoHXrt-bgaxAFoI?usp=drive_link).
 
 
 ## 3. Grounded SAM 2 Body Mask Generation
