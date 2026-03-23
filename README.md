@@ -30,7 +30,11 @@ pip install -U diffusers
 pip install git+https://github.com/asomoza/image_gen_aux.git
 ```
 
-## 2. Grounded SAM 2 Body Mask Generation
+## 2. Download Dataset
+Download **VITON-HD** dataset from [here](https://drive.google.com/file/d/1tLx8LRp-sxDp0EcYmYoV_vXdSc-jJ79w/view).
+
+
+## 3. Grounded SAM 2 Body Mask Generation
 
 Clone the forked repository:  
 https://github.com/ShenZheng2000/Grounded-SAM-2
@@ -39,7 +43,8 @@ Follow the installation instructions in the repo to set up the environment and p
 Then run `run.py`, setting `--input-dir` to your dataset directory
 
 
-## 3. Specify Relighting Prompts
+## 4. Specify Relighting Prompts
+
 Edit `utils.py` to define or modify relighting prompts.
 
 For example:
@@ -56,7 +61,7 @@ relighting_prompts_6 = {
 
 
 
-## 4. Prepare Dataset
+## 5. Prepare Dataset
 In the YAML config file, set `input_dir` to your dataset path.
 
 Expected dataset structure:
@@ -72,7 +77,7 @@ $dataset_name/
 ```
 
 
-## 5. Run inference & Prepare train-test splits
+## 6. Run inference & Prepare train-test splits
 
 See `inf.sh` for example commands.
 
